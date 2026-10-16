@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Línea del Tiempo del Avance de la Tecnología</title>
+<style>
+body{margin:0;font-family:Arial,sans-serif;background:#0f172a;color:#e5e7eb}
+header{background:linear-gradient(135deg,#020617,#1e293b);padding:50px;text-align:center}
+header h1{color:#60a5fa;margin:0}
+header p{color:#cbd5e1}
+.toolbar{position:sticky;top:0;background:#1e293b;padding:10px;text-align:center;z-index:10}
+button{padding:10px 15px;margin:5px;border:none;border-radius:6px;cursor:pointer}
+.timeline{position:relative;max-width:1100px;margin:auto;padding:20px}
+.timeline::after{content:'';position:absolute;width:4px;background:#60a5fa;top:0;bottom:0;left:50%}
+.container{position:relative;width:50%;padding:20px 40px;box-sizing:border-box}
+.left{left:0}
+.right{left:50%}
+.content{background:#1e293b;padding:20px;border-radius:12px;box-shadow:0 0 15px rgba(0,0,0,.5);animation:fadeIn .8s ease}
+.content img{width:100%;border-radius:8px;margin:10px 0}
+.fecha{color:#60a5fa;font-weight:bold}
+#info{display:none;background:#1e293b;margin:20px;padding:20px;border-radius:12px}
+@keyframes fadeIn{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+@media(max-width:768px){
+.timeline::after{left:25px}
+.container{width:100%;left:0;padding-left:60px}
+}
+</style>
+<script>
+function guardarPagina(){window.print();}
+function editarContenido(){
+ document.body.contentEditable=(document.body.contentEditable!=="true");
+ alert(document.body.contentEditable==="true"?"Modo edición activado":"Modo edición desactivado");
+}
+function mostrarInfo(){
+ let x=document.getElementById('info');
+ x.style.display=(x.style.display==='block')?'none':'block';
+}
+</script>
+</head>
+<body>
+
+<header>
+<h1>LÍNEA DEL TIEMPO DEL AVANCE DE LA TECNOLOGÍA</h1>
+<p>Proyecto académico - Evolución tecnológica desde la Prehistoria hasta la Inteligencia Artificial</p>
+</header>
+
+<div class="toolbar">
+<button onclick="guardarPagina()">💾 Guardar / Imprimir</button>
+<button onclick="editarContenido()">✏️ Editar</button>
+<button onclick="mostrarInfo()">ℹ️ Más información</button>
+</div>
+
+<div id="info">
+<h2>Información del proyecto</h2>
+<p>Esta línea del tiempo muestra los principales avances tecnológicos que han transformado la historia de la humanidad. Incluye fechas, imágenes y descripciones resumidas de cada acontecimiento.</p>
+</div>
+
+<div class="timeline">
+
+<div class="container left">
+<div class="content">
+<div class="fecha">2.5 millones a.C. – 3000 a.C.</div>
+<h2>Prehistoria</h2>
+<img src="https://upload.wikimedia.org/wikipedia/commons/3/3f/Stone_Age_tools.jpg">
+<p>Desarrollo de herramientas de piedra y descubrimiento del fuego.</p>
+</div>
+</div>
+
+<div class="container right">
+<div class="content">
+<div class="fecha">3000 a.C. – 500 d.C.</div>
+<h2>Civilizaciones Antiguas</h2>
+<img src="https://upload.wikimedia.org/wikipedia/commons/7/7d/Egypt.Giza.Sphinx.02.jpg">
+<p>Invención de la escritura, la rueda y grandes obras de ingeniería.</p>
+</div>
+</div>
+
+<div class="container left">
+<div class="content">
+<div class="fecha">1450</div>
+<h2>Imprenta</h2>
+<img src="https://upload.wikimedia.org/wikipedia/commons/4/4d/Gutenberg_Bible.jpg">
+<p>Gutenberg revolucionó la difusión del conocimiento.</p>
+</div>
+</div>
+
+<div class="container right">
+<div class="content">
+<div class="fecha">1760–1840</div>
+<h2>Revolución Industrial</h2>
+<img src="https://upload.wikimedia.org/wikipedia/commons/1/1e/Steam_engine_in_action.jpg">
+<p>La máquina de vapor impulsó la industrialización.</p>
+</div>
+</div>
+
+<div class="container left">
+<div class="content">
+<div class="fecha">1837</div>
+<h2>Telégrafo</h2>
+<img src="https://upload.wikimedia.org/wikipedia/commons/9/92/Samuel_Morse_with_his_Recorder_by_Brady%2C_1857.png">
+<p>Inicio de las telecomunicaciones modernas.</p>
+</div>
+</div>
+
+<div class="container right">
+<div class="content">
+<div class="fecha">1876</div>
+<h2>Teléfono</h2>
+<img src="https://upload.wikimedia.org/wikipedia/commons/1/10/Alexander_Graham_Bell.jpg">
+<p>Comunicación instantánea mediante voz.</p>
+</div>
+</div>
+
+<div class="container left">
+<div class="content">
+<div class="fecha">1945</div>
+<h2>Computadora Electrónica</h2>
+<img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/ENIAC-changing_a_tube.jpg">
+<p>Inicio de la informática moderna con el ENIAC.</p>
+</div>
+</div>
+
+<div class="container right">
+<div class="content">
+<div class="fecha">1947</div>
+<h2>Transistor</h2>
+<img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Transistor-photo.jpg">
+<p>Base de los dispositivos electrónicos actuales.</p>
+</div>
+</div>
+
+<div class="container left">
+<div class="content">
+<div class="fecha">1969</div>
+<h2>Internet</h2>
+<img src="https://upload.wikimedia.org/wikipedia/commons/0/00/Arpanet_logical_map%2C_march_1977.png">
+<p>ARPANET sentó las bases de Internet.</p>
+</div>
+</div>
+
+<div class="container right">
+<div class="content">
+<div class="fecha">1975</div>
+<h2>Computadora Personal</h2>
+<img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/IBM_PC_5150.jpg">
+<p>La informática llegó a hogares y oficinas.</p>
+</div>
+</div>
+
+<div class="container left">
+<div class="content">
+<div class="fecha">1989</div>
+<h2>World Wide Web</h2>
+<img src="https://upload.wikimedia.org/wikipedia/commons/d/d2/Tim_Berners-Lee.jpg">
+<p>Creación de la WWW por Tim Berners-Lee.</p>
+</div>
+</div>
+
+<div class="container right">
+<div class="content">
+<div class="fecha">1990–2000</div>
+<h2>Telefonía Móvil</h2>
+<img src="https://upload.wikimedia.org/wikipedia/commons/3/34/Nokia_1011.jpg">
+<p>Popularización de los teléfonos celulares.</p>
+</div>
+</div>
+
+<div class="container left">
+<div class="content">
+<div class="fecha">2007</div>
+<h2>Smartphones</h2>
+<img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/IPhone_first_gen.jpg">
+<p>Integración de múltiples tecnologías en un solo dispositivo.</p>
+</div>
+</div>
+
+<div class="container right">
+<div class="content">
+<div class="fecha">2010 – Actualidad</div>
+<h2>Inteligencia Artificial</h2>
+<img src="https://upload.wikimedia.org/wikipedia/commons/e/e4/Artificial_Intelligence.jpg">
+<p>Aplicación de IA en salud, educación, industria y servicios.</p>
+</div>
+</div>
+
+</div>
+</body>
+</html>
